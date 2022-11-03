@@ -6,15 +6,10 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Use row',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
@@ -33,31 +28,97 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Use Wedget Row"),
+        backgroundColor: Colors.orange,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(15),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+        padding: EdgeInsets.all(10),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Container(
-              width: 20,
-              height: 20,
-              color: Colors.red,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(width: 40, height: 40, color: Colors.red),
+                Container(width: 40, height: 40, color: Colors.blue),
+                Container(width: 40, height: 40, color: Colors.green),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(width: 40, height: 40, color: Colors.red),
+                Container(width: 40, height: 40, color: Colors.blue),
+                Container(width: 40, height: 40, color: Colors.green),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Container(width: 40, height: 40, color: Colors.red),
+                Container(width: 40, height: 40, color: Colors.blue),
+                Container(width: 40, height: 40, color: Colors.green),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(width: 40, height: 40, color: Colors.red),
+                Container(width: 40, height: 40, color: Colors.blue),
+                Container(width: 40, height: 40, color: Colors.green),
+              ],
             ),
             Container(
-              width: 20,
-              height: 20,
-              color: Colors.red,
+              height: 60,
+              color: Colors.orangeAccent,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Container(width: 40, height: 40, color: Colors.red),
+                  Container(width: 40, height: 40, color: Colors.blue),
+                  Container(width: 40, height: 40, color: Colors.green),
+                ],
+              ),
             ),
             Container(
-              width: 20,
-              height: 20,
-              color: Colors.red,
+              height: 60,
+              color: Colors.orangeAccent,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(width: 40, height: 40, color: Colors.red),
+                  Container(width: 40, height: 40, color: Colors.blue),
+                  Container(width: 40, height: 40, color: Colors.green),
+                ],
+              ),
             ),
             Container(
-              color: Colors.red,
-              child: Text("Row"),
-            )
+              height: 60,
+              color: Colors.orangeAccent,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(width: 40, height: 40, color: Colors.red),
+                  Container(width: 40, height: 40, color: Colors.blue),
+                  Container(width: 40, height: 40, color: Colors.green),
+                ],
+              ),
+            ),
+            Container(
+              height: 60,
+              color: Colors.orangeAccent,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Container(width: 40, height: 40, color: Colors.red),
+                  Container(width: 40, height: 40, color: Colors.blue),
+                  Container(width: 40, height: 40, color: Colors.green),
+                ],
+              ),
+            ),
           ],
         ),
       ),
