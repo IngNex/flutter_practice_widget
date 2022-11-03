@@ -112,6 +112,21 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(width: 40, height: 40, color: Colors.red),
+                  Container(width: 40, height: 40, color: Colors.blue),
+                  Container(width: 40, height: 40, color: Colors.green),
+                ],
+              ),
+            ),
+            Container(
+              height: 60,
+              color: Colors.orangeAccent,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisSize: MainAxisSize.max,
                 children: [
                   Container(width: 40, height: 40, color: Colors.red),
                   Container(width: 40, height: 40, color: Colors.blue),
